@@ -1,0 +1,484 @@
+// Online C++ compiler to run C++ program online
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    // Write C++ code here
+    int n;
+    cin>>n;
+    /*pattern 1
+    *****
+*****
+*****
+*****
+*****
+*/
+
+//     for(int i =0; i<n; i++)
+//      {    
+//     for (int j=0; j<n;j++)
+//     {
+//         cout<< "*";
+//     }
+//     cout<< "\n";
+//      }
+
+//Pattern 2
+// *
+// **
+// ***
+// ****
+// *****
+    // for(int i =1; i<=n; i++)
+    //  {    
+    // for (int j=1; j<=i;j++)
+    // {
+    //     cout<< "*";
+    // }
+    // cout<< "\n";
+    //  }
+// Pattern 3
+// 1
+// 12
+// 123
+// 1234
+// 12345
+// for(int i =1; i<=n; i++)
+//      {    
+//     for (int j=1; j<=i;j++)
+//     {
+//         cout<< j;
+//     }
+//     cout<< "\n";
+//      }
+
+// Pattern 4
+// 1
+// 22
+// 333
+// 4444
+// 55555
+// for(int i =1; i<=n; i++)
+//      {    
+//     for (int j=1; j<=i;j++)
+//     {
+//         cout<< i;
+//     }
+//     cout<< "\n";
+//      }
+
+// Pattern 5
+// *****
+// ****
+// ***
+// **
+// *
+// for(int i =n; i>=1; i--)
+//      {    
+//     for (int j=1; j<=i;j++)
+//     {
+//         cout<< "*";
+//     }
+//     cout<< "\n";
+//      }
+
+// Pattern 6
+// 12345
+// 1234
+// 123
+// 12
+// 1
+// for(int i =n; i>=1; i--)
+//      {    
+//     for (int j=1; j<=i;j++)
+//     {
+//         cout<< j;
+//     }
+//     cout<< "\n";
+//      }
+     
+    //  Pattern 7
+//    *
+//   ***
+//  *****
+// *******
+// for(int i =1, k=1; i<=n; i++, k+=2)
+//      {   
+//         for(int k=i; k<n; k++)
+//             cout<< " ";
+    
+//         for (int j=1; j<=k;j++)
+//         {
+//         cout<< "*";
+//         }
+//         cout<< "\n";
+//      }
+
+// Pattern 8
+//  ***********
+//   *********
+//    *******
+//     *****
+//      ***
+//       *
+// for(int i =1, k=2*n-1; i<=n; i++, k-=2)
+// {
+//     for(int k= 1; k<=i; k++)
+//     cout<<" ";
+//     for(int j =1; j<=k; j++)
+//     cout<<"*";
+    
+//     cout<< "\n";
+// }
+// Pattern 9
+
+//     *
+//    ***
+//   *****
+//  *******
+// *********
+// *********
+//  *******
+//   *****
+//    ***
+//     *
+
+// for(int i =1, k=1; i<=n; i++, k+=2)
+//      {   
+//         for(int k=i; k<n; k++)
+//             cout<< " ";
+    
+//         for (int j=1; j<=k;j++)
+//         {
+//         cout<< "*";
+//         }
+//         cout<< "\n";
+//      }
+// for(int i =1, k=2*n-1; i<=n; i++, k-=2)
+// {
+//     for(int k= 1; k<i; k++)
+//     cout<<" ";
+//     for(int j =1; j<=k; j++)
+//     cout<<"*";
+    
+//     cout<< "\n";
+// }
+
+// Pattern 10
+
+// *
+// **
+// ***
+// ****
+// *****
+// *****
+// ****
+// ***
+// **
+// *
+
+// for(int i =1; i<=n; i++)
+//      {   
+//         for (int j=1; j<=i;j++)
+//         cout<< "*";
+//         cout<< "\n";
+//      }
+// for(int i =n; i>=1; i--)
+// {
+//     for(int j =1; j<=i; j++)
+//     cout<<"*";
+//     cout<< "\n";
+// }
+
+// Pattern 11
+// 1
+// 01
+// 101
+// 0101
+// 10101
+// for(int i=1; i<=n;i++)
+// {
+//     for(int j=1; j<=i; j++)
+//     {
+//         cout<<((i+j+1)%2);
+//     }
+//     cout<<"\n";
+// }
+
+// Pattern 12
+// 1        1
+// 12      21
+// 123    321
+// 1234  4321
+// 1234554321
+// for(int i=1, k=2*n-2; i<=n; i++, k-=2)
+// {
+//     for(int j=1; j<=i; j++)
+//     cout<<j;
+//     for(int Q=1; Q<=k; Q++)
+//     cout<< " ";
+//     for(int j=i; j>=1; j--)
+//     cout<<j;
+//     cout<< "\n";
+// }
+
+// Pattern 13
+// 1 
+// 2 3 
+// 4 5 6 
+// 7 8 9 10 
+// 11 12 13 14 15 
+// for(int i= 1, k=1; i<=n; i++)
+// {
+//     for(int j=1; j<=i; j++)
+//     cout<< k++ << " ";
+//     cout<< "\n";
+// }
+
+// Pattern 14
+// A 
+// A B 
+// A B C 
+// A B C D 
+// A B C D E 
+// for(int i= 1; i<=n; i++)
+// {
+//     char c='A';
+//     for(int j=1; j<=i; j++)
+//     cout<< c++ << " ";
+//     cout<< "\n";
+// }
+
+
+// Pattern 15
+// A B C D E 
+// A B C D 
+// A B C 
+// A B 
+// A 
+
+// for(int i= 1; i<=n; i++)
+// {
+//     char c='A';
+//     for(int j=1; j<=n-i+1; j++)
+//     cout<< c++ << " ";
+//     cout<< "\n";
+// }
+
+// Pattern 16
+// A 
+// B B 
+// C C C 
+// D D D D 
+// E E E E E 
+// char c='A';
+    
+// for(int i= 1; i<=n; i++)
+// {
+//     for(int j=1; j<=i; j++)
+//     cout<< c << " ";
+//     c++;
+//     cout<< "\n";
+// }
+
+// Pattern 17
+//      A
+//     ABA
+//    ABCBA
+//   ABCDCBA
+//  ABCDEDCBA
+// ABCDEFEDCBA
+    
+// for(int i= 1; i<=n; i++)
+// {
+//     char c='A';
+//     for(int k=1; k<=n-i;k++)
+//     cout<< " ";
+//     for(int j=1; j<=i; j++)
+//     cout<< c++;
+//     c--;
+//     for(int j=1; j<=i-1; j++)
+//     {
+//         c--;
+//         cout<< c ;
+//     }// c++;
+//     cout<< "\n";
+// }
+
+// Pattern 18
+// E 
+// D E 
+// C D E 
+// B C D E 
+// A B C D E 
+// char c= 'E';
+// for(int i= 1; i<=n; i++)
+// {
+//     for(int j=1; j<=i; j++)
+//     cout<< c++ << " ";
+//     for(int j=1; j<=i+1; j++)
+//     c--;
+    
+//     cout<< "\n";
+// }
+
+
+// Pattern 19
+// **********
+// ****  ****
+// ***    ***
+// **      **
+// *        *
+// *        *
+// **      **
+// ***    ***
+// ****  ****
+// **********
+// for(int i =0; i<n; i++)
+// {
+//     for(int j=1; j<=n-i; j++)
+//     {
+//         cout<<"*";
+//     }
+//     for(int j=1; j<=2*i; j++)
+//     {
+//         cout<<" ";
+//     }
+//     for(int j=1; j<=n-i; j++)
+//     {
+//         cout<<"*";
+//     }
+//     cout<<"\n";
+// }
+// for(int i =0; i<n; i++)
+// {
+//     for(int j=1; j<=i+1; j++)
+//     {
+//         cout<<"*";
+//     }
+//     for(int j=1; j<=2*(n-i-1); j++)
+//     {
+//         cout<<" ";
+//     }
+//     for(int j=1; j<=i+1; j++)
+//     {
+//         cout<<"*";
+//     }
+//     cout<<"\n";
+// }
+
+// Pattern 20
+
+// *        *
+// **      **
+// ***    ***
+// ****  ****
+// **********
+// **********
+// ****  ****
+// ***    ***
+// **      **
+// *        *
+// for(int i =0; i<n; i++)
+// {
+//     for(int j=1; j<=i+1; j++)
+//     {
+//         cout<<"*";
+//     }
+//     for(int j=1; j<=2*(n-i-1); j++)
+//     {
+//         cout<<" ";
+//     }
+//     for(int j=1; j<=i+1; j++)
+//     {
+//         cout<<"*";
+//     }
+//     cout<<"\n";
+// }
+// for(int i =0; i<n; i++)
+// {
+//     for(int j=1; j<=n-i; j++)
+//     {
+//         cout<<"*";
+//     }
+//     for(int j=1; j<=2*i; j++)
+//     {
+//         cout<<" ";
+//     }
+//     for(int j=1; j<=n-i; j++)
+//     {
+//         cout<<"*";
+//     }
+//     cout<<"\n";
+// }
+
+// Pattern 21
+// *****
+// *   *
+// *   *
+// *   *
+// *****
+// for(int i =1; i<=n; i++)
+// {
+//     for(int j=1; j<=n; j++)
+//     {
+//         if(i==1|| i==n||j==1||j==n)
+//         cout<<"*";
+//         else
+//         cout<< " ";
+//     }
+
+//     cout<<"\n";
+// }
+
+// Pattern 22
+// 4 4 4 4 4 4 4 
+// 4 3 3 3 3 3 4 
+// 4 3 2 2 2 3 4 
+// 4 3 2 1 2 3 4 
+// 4 3 2 2 2 3 4 
+// 4 3 3 3 3 3 4 
+// 4 4 4 4 4 4 4 
+
+// for(int i =0; i<n; i++)
+// {
+//     int q=n;
+//     for(int j=1; j<=i+1; j++)
+//     {
+//         cout<<q--<<" ";
+//     }
+//     q++;
+//     for(int j=1; j<=2*(n-i-1); j++)
+//     {
+//         cout<<q<<" ";
+//     }
+//     q++;
+//     for(int j=1; j<=i; j++)
+//     {
+//         cout<<q++<<" ";
+//     }
+//     cout<<"\n";
+// }
+// for(int i =1; i<n; i++)
+// {   
+//     int q=n;
+//     for(int j=1; j<=n-i; j++)
+//     {
+//         cout<<q--<<" ";
+//     }
+//     q++;
+//     for(int j=1; j<=2*i; j++)
+//     {
+//         cout<<q<<" ";
+//     }
+//     q++;
+//     for(int j=1; j<=n-i-1; j++)
+//     {
+//         cout<<q++<<" ";
+//     }
+//     cout<<"\n";
+// }
+
+
+return 0;
+}
